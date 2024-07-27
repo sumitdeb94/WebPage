@@ -22,7 +22,7 @@ function App() {
             <SFlex width={'100%'} align={'center'} justify={'space-between'}
                    style={{padding: '10px 20px', borderBottom: '1px solid lightgray'}}>
                 <h1>BlogSpot.</h1>
-                <SFlex align={'start'}>
+                <SFlex>
                     <p>
                         Articles
                         <sup>(123)</sup>

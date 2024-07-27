@@ -15,7 +15,7 @@ function App() {
             <SButton onClick={() => {
                 set_l1(prev => !prev)
             }}>
-                Toggle Loading
+                Toggle Loading.....
             </SButton>
         </SFlex>
     )

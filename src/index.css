@@ -35,7 +35,7 @@ html, body {
     font-family: 'Inter Tight Variable', sans-serif
 }
 
-h1, h2, h3, h4, h5, h6, a, p, header, b, nav {
-    margin: 0;
-    white-space: nowrap;
+.adjustProfilePhoto {
+    align-content: center;
+    justify-content: center;
 }

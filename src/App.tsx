@@ -1,7 +1,9 @@
 import './App.css';
+// import firstImage from './free-images-for-blogs.jpg';
 import {useEffect, useMemo, useState} from 'react';
 import {SBadge, SButton, SFlex} from "react-simple-ui-lib";
-import {FaSearch} from "react-icons/fa";
+import {FaArrowCircleLeft, FaSearch} from "react-icons/fa";
+import {Si500Px, SiBox} from "react-icons/si";
 
 function App() {
     const [posts, set_posts] = useState([])
@@ -17,34 +19,44 @@ function App() {
     // }
 
     return (
-        <SFlex direction={'column'}>
+        // grandParent container
+        <SFlex direction={'column'} style={{marginLeft: 15}}>
             {/*Header*/}
             <SFlex width={'100%'} align={'center'} justify={'space-between'}
                    style={{padding: '10px 20px', borderBottom: '1px solid lightgray'}}>
-                <h1>BlogSpot.</h1>
-                <SFlex>
-                    <p>
-                        Articles
-                        <sup>(123)</sup>
-                    </p>
-                    <p>Radio
-                        <sup>(123)</sup></p>
-                    <p>Podcast
-                        <sup>(123)</sup></p>
-                    <p>Be a writer</p>
-                    <p>Talk to us</p>
-                    <SBadge>Basged</SBadge>
+                <p>Adze.Design</p>
+                <SFlex align={'center'} justify={'center'}
+                       style={{width: 20, height: 30, background: 'lightgray', borderRadius: '20%'}}>
+                    <FaArrowCircleLeft/>
                 </SFlex>
+                <SFlex></SFlex>
+                <SFlex></SFlex>
+                <SFlex></SFlex>
+                <SFlex></SFlex>
+                <SFlex></SFlex>
+
                 <SFlex>
                     <SFlex align={'center'} justify={'center'}
                            style={{width: 30, height: 30, background: 'lightgray', borderRadius: '50%'}}>
                         <FaSearch/>
                     </SFlex>
+
                     <SFlex align={'center'} justify={'center'}>
-                        <SButton outline={true} style={{borderRadius: 20, borderColor: 'black', color: 'black'}}
-                                 onClick={() => {
-                                 }}>Menu</SButton>
+                        <img src={'/Notification Icon.png'}
+                             style={{width: 30, height: 30, background: 'lightgray', borderRadius: '50%'}}/>
                     </SFlex>
+                    <SFlex className={'adjustProfilePhoto'}>
+                        <button style={{width: 30, height: 30, background: 'lightgray', borderRadius: '50%'}}>
+                            <img src={'/ProfilePhoto.png'}
+                                 style={{width: 30, height: 30, background: 'lightgray', borderRadius: '50%'}}/>
+                        </button>
+                    </SFlex>
+                    {/*Menu button*/}
+                    {/*<SFlex align={'center'} justify={'center'}>*/}
+                    {/*    <SButton outline={true} style={{borderRadius: 20, borderColor: 'black', color: 'black'}}*/}
+                    {/*             onClick={() => {*/}
+                    {/*             }}>Menu</SButton>*/}
+                    {/*</SFlex>*/}
                 </SFlex>
             </SFlex>
 
@@ -57,7 +69,17 @@ function App() {
             {/*        })*/}
             {/*    }*/}
             {/*</SFlex>*/}
+            {/*left hand side parent container*/}
+            <SFlex direction={'column'}>
+                <SButton outline={true} style={{borderRadius: 10, borderColor: 'black', color: 'black'}}
+                         onClick={() => {
+                         }}>WEB APP</SButton>
+
+            </SFlex>
+
+
         </SFlex>
+
     )
 }
 

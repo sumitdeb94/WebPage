@@ -5,7 +5,6 @@ import { SButton, SFlex } from 'react-simple-ui-lib';
 import Header from './header.tsx';
 import Menu from './menu.tsx';
 import Playlists from './playlists.tsx';
-import { FaSearch } from 'react-icons/fa';
 
 function App() {
     const [posts, set_posts] = useState([]);
@@ -37,6 +36,7 @@ function App() {
                     <p>43M Monthly listeners</p>
                     <SButton>Follow</SButton>
                 </SFlex>
+                {/*Play List Details*/}
                 <Playlists />
             </SFlex>
         </SFlex>

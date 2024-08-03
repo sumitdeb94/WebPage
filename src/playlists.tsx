@@ -7,6 +7,7 @@ import { FaRegCirclePlay } from 'react-icons/fa6';
 import { GoShareAndroid } from 'react-icons/go';
 import { FiUpload } from 'react-icons/fi';
 import { RxDotsVertical } from 'react-icons/rx';
+import FooterPlayer from './footerPlayer.tsx';
 
 const music_list = [
     {
@@ -23,8 +24,8 @@ const music_list = [
     {
         id: 2,
         playButton: <FaRegCirclePlay />,
-        title: 'The Finishing',
-        artist: "Ikako Music's",
+        title: 'Hello',
+        artist: 'Adele',
         views: '200k',
         music_length: '2:43',
         icons1: <GoShareAndroid />,
@@ -102,6 +103,8 @@ export default function Playlists() {
                     </SFlex>
                 </SFlex>
             ))}
+            {/*// Footer Player*/}
+            <FooterPlayer />
         </SFlex>
     );
 }

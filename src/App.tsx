@@ -1,12 +1,8 @@
-import styles from './App.module.scss';
 import { useState } from 'react';
-import { SButton, SFlex } from 'react-simple-ui-lib';
+import { SFlex } from 'react-simple-ui-lib';
 import Header from './header.tsx';
 import Menu from './menu.tsx';
 import Playlists from './playlists.tsx';
-import { MdOutlinePlayCircleFilled } from 'react-icons/md';
-import { GoShareAndroid } from 'react-icons/go';
-import { FiUpload } from 'react-icons/fi';
 import DisplayOverImage from './display_over_image.tsx';
 
 function App() {

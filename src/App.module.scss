@@ -1,8 +1,31 @@
 .displayImage {
   width: 100%;
   background-image: url("https://cdn.pixabay.com/photo/2023/10/03/09/59/port-8291059_1280.jpg");
-  max-height: 60vh;
+  min-height: 60vh;
   border-radius: 5px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.playListSection{
+  width: 100%;
+  align-items: center;
+}
+
+.buttonFont{
+  font-size: 30px;
+  align-items: center;
+}
+
+.allButtonFont{
+  font-size: 20px;
+  align-items: center;
+}
+
+.playList{
+  padding: 20px;
+  margin-right: 3px;
+  align-items: center;
 }
 
 .headerIcon {
@@ -10,4 +33,10 @@
   height: 36px;
   border-radius: 50%;
   border: 1px solid gray;
+  align-items: center;
+}
+
+.ppp{
+  width: 500%;
+  background: red;
 }

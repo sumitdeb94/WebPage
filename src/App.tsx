@@ -4,11 +4,13 @@ import { useState } from 'react';
 import { SButton, SFlex, SImage, SPageSection } from 'react-simple-ui-lib';
 import { FaArrowCircleLeft, FaSearch, FaUser } from 'react-icons/fa';
 import { RiHomeLine } from 'react-icons/ri';
-import { MdOutlinePlaylistAdd, MdPlaylistPlay, MdOutlineSubscriptions } from 'react-icons/md';
+import { MdOutlinePlaylistAdd, MdPlaylistPlay, MdOutlineSubscriptions, MdLogout, MdSettings } from 'react-icons/md';
 import { BiSolidPlaylist } from 'react-icons/bi';
 import { GiKiwiFruit } from 'react-icons/gi';
 import { IoMusicalNotes } from 'react-icons/io5';
 import { FaLongArrowAltLeft } from 'react-icons/fa';
+import { PiEyeBold } from 'react-icons/pi';
+import { LuClock3 } from 'react-icons/lu';
 
 function App() {
     const [posts, set_posts] = useState([]);
@@ -25,9 +27,9 @@ function App() {
 
     return (
         // grandParent container
-        <SFlex width={'100%'} style={{ background: 'green' }}>
+        <SFlex width={'100%'} style={{ background: 'grey' }}>
             {/*Menu collections*/}
-            <SFlex direction={'column'} padding={20} paddingTop={60} style={{ minHeight: '100vh' }} width={250} gap={30}>
+            <SFlex direction={'column'} padding={20} paddingTop={60} style={{ minHeight: '100vh' }} width={250} gap={20}>
                 <SButton>
                     <FaLongArrowAltLeft /> Menu
                 </SButton>
@@ -51,6 +53,20 @@ function App() {
                 </SFlex>
                 <SFlex>
                     <GiKiwiFruit /> My Fruits
+                </SFlex>
+                <br />
+                <br />
+                <SFlex>My Playlist #1</SFlex>
+                <SFlex>Christmas Track</SFlex>
+                <SFlex>Other Remix</SFlex>
+                <SFlex>Release Radar</SFlex>
+                <br />
+                <br />
+                <SFlex>
+                    <MdSettings /> Settings
+                </SFlex>
+                <SFlex>
+                    <MdLogout /> Log Out
                 </SFlex>
             </SFlex>
 
@@ -76,9 +92,25 @@ function App() {
                 </SFlex>
 
                 {/*Content Parent*/}
-                <SPageSection className={styles.displayImage} align="center">
-                    <h1>Hero Section</h1>
+                <SPageSection className={styles.displayImage} align={'center'}>
+                    <h3>Olsen Olsen</h3>
+                    <p>43M Monthly listeners</p>
+                    <SButton>Follow</SButton>
                 </SPageSection>
+                <SFlex height={30} width={'80%'} align={'center'} justify={'space-between'} padding={'10px 20px'} style={{ borderBottom: '1px solid lightgray' }}>
+                    <b># TITLE</b>
+                    <SFlex gap={160}>
+                        <SFlex>
+                            <IoMusicalNotes fontSize={18} />
+                        </SFlex>
+                        <SFlex>
+                            <PiEyeBold fontSize={18} />
+                        </SFlex>
+                        <SFlex>
+                            <LuClock3 fontSize={18} />
+                        </SFlex>
+                    </SFlex>
+                </SFlex>
             </SFlex>
 
             {/*<SPageSection padding={0} className={styles.hero} backgroundUrl={'https://placehold.co/720'} backgroundSize={'cover'}>*/}

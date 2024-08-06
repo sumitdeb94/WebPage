@@ -1,4 +1,4 @@
-import styles from './App.module.scss';
+import styles from '../App.module.scss';
 import { SFlex } from 'react-simple-ui-lib';
 import { IoMusicalNotes } from 'react-icons/io5';
 import { PiEyeBold } from 'react-icons/pi';
@@ -7,7 +7,8 @@ import { FaRegCirclePlay } from 'react-icons/fa6';
 import { GoShareAndroid } from 'react-icons/go';
 import { FiUpload } from 'react-icons/fi';
 import { RxDotsVertical } from 'react-icons/rx';
-import FooterPlayer from './footerPlayer.tsx';
+import FooterPlayer from '../footer-player/footer-player.tsx';
+import { useState } from 'react';
 
 const music_list = [
     {
@@ -17,9 +18,10 @@ const music_list = [
         artist: "Ikako Music's",
         views: '200k',
         music_length: '2:43',
-        icons1: <GoShareAndroid />,
-        icons2: <FiUpload />,
-        icons3: <RxDotsVertical />,
+        icon1: <GoShareAndroid />,
+        icon2: <FiUpload />,
+        icon3: <RxDotsVertical />,
+        url: 'https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3',
     },
     {
         id: 2,
@@ -28,9 +30,10 @@ const music_list = [
         artist: 'Adele',
         views: '200k',
         music_length: '2:43',
-        icons1: <GoShareAndroid />,
-        icons2: <FiUpload />,
-        icons3: <RxDotsVertical />,
+        icon1: <GoShareAndroid />,
+        icon2: <FiUpload />,
+        icon3: <RxDotsVertical />,
+        url: 'https://',
     },
     {
         id: 3,
@@ -39,9 +42,10 @@ const music_list = [
         artist: 'We must earn love',
         views: '200k',
         music_length: '2:43',
-        icons1: <GoShareAndroid />,
-        icons2: <FiUpload />,
-        icons3: <RxDotsVertical />,
+        icon1: <GoShareAndroid />,
+        icon2: <FiUpload />,
+        icon3: <RxDotsVertical />,
+        url: 'https://',
     },
     {
         id: 4,
@@ -50,9 +54,10 @@ const music_list = [
         artist: 'Linkin Park',
         views: '200k',
         music_length: '2:43',
-        icons1: <GoShareAndroid />,
-        icons2: <FiUpload />,
-        icons3: <RxDotsVertical />,
+        icon1: <GoShareAndroid />,
+        icon2: <FiUpload />,
+        icon3: <RxDotsVertical />,
+        url: 'https://',
     },
     {
         id: 5,
@@ -61,14 +66,18 @@ const music_list = [
         artist: 'Richard Marx',
         views: '200k',
         music_length: '2:43',
-        icons1: <GoShareAndroid />,
-        icons2: <FiUpload />,
-        icons3: <RxDotsVertical />,
+        icon1: <GoShareAndroid />,
+        icon2: <FiUpload />,
+        icon3: <RxDotsVertical />,
+        url: 'https://',
     },
 ];
 export default function Playlists() {
+    const [current_song, set_current_song] = useState(music_list[0]);
+
     return (
         <SFlex width="100%" direction={'column'} className={styles.playList}>
+            {/*<h1>{current_song.title}</h1>*/}
             <SFlex>
                 <SFlex width={300}>
                     <b>#TITLE</b>
@@ -84,7 +93,11 @@ export default function Playlists() {
                 </SFlex>
             </SFlex>
             {music_list.map((music) => (
-                <SFlex className={styles.playListSection}>
+                <SFlex
+                    className={styles.playListSection}
+                    onClick={() => {
+                        set_current_song(music);
+                    }}>
                     <SFlex width={200} className={styles.buttonFont}>
                         {music.playButton}
                     </SFlex>
@@ -93,18 +106,18 @@ export default function Playlists() {
                     <SFlex width={200}>{music.views}</SFlex>
                     <SFlex width={200}>{music.music_length}</SFlex>
                     <SFlex className={styles.allButtonFont} width={200}>
-                        {music.icons1}
+                        {music.icon1}
                     </SFlex>
                     <SFlex className={styles.allButtonFont} width={200}>
-                        {music.icons2}
+                        {music.icon2}
                     </SFlex>
                     <SFlex className={styles.allButtonFont} width={200}>
-                        {music.icons3}
+                        {music.icon3}
                     </SFlex>
                 </SFlex>
             ))}
             {/*// Footer Player*/}
-            <FooterPlayer />
+            <FooterPlayer c_music={current_song} />
         </SFlex>
     );
 }

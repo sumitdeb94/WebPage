@@ -1,10 +1,9 @@
-.displayImage {
-  width: 100%;
-  background-image: url("https://cdn.pixabay.com/photo/2023/10/03/09/59/port-8291059_1280.jpg");
-  min-height: 60vh;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  align-items: center;
+.mainPlayer{
+    position: fixed;
+    width: 100%;
+    background: lightslategray;
+    bottom: 0;
+    left: 0;
 }
 
 .playListSection{

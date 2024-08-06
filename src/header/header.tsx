@@ -1,5 +1,5 @@
 import { FaArrowCircleLeft, FaSearch, FaUser } from 'react-icons/fa';
-import styles from './App.module.scss';
+import styles from '../App.module.scss';
 import { SFlex } from 'react-simple-ui-lib';
 
 export default function Header() {

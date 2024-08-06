@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { SFlex } from 'react-simple-ui-lib';
-import Header from './header.tsx';
+import Header from './header/header.tsx';
 import Menu from './menu.tsx';
-import Playlists from './playlists.tsx';
+import Playlists from './playlists/playlists.tsx';
 import DisplayOverImage from './display_over_image.tsx';
 
 function App() {
@@ -20,10 +20,9 @@ function App() {
 
     return (
         // grandParent container
-        <SFlex width={'100%'}>
+        <SFlex width={'100%'} style={{ marginBottom: 100 }}>
             {/*Menu collections*/}
             <Menu />
-
             {/*Content*/}
             <SFlex direction={'column'} width={'calc(100% - 250px)'}>
                 {/*Header*/}

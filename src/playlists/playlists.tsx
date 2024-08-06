@@ -77,7 +77,6 @@ export default function Playlists() {
 
     return (
         <SFlex width="100%" direction={'column'} className={styles.playList}>
-            {/*<h1>{current_song.title}</h1>*/}
             <SFlex>
                 <SFlex width={300}>
                     <b>#TITLE</b>
